@@ -133,7 +133,7 @@
 
   ul,
   ol {
-    padding-inline-start: $padding-16 * 2;
+    padding-inline-start: $padding-list * 2;
   }
 
   dl {
@@ -170,6 +170,11 @@
       padding: $padding-16;
       margin: -$padding-16;
       cursor: pointer;
+    }
+    
+    summary h1,h2,h3,h4,h5 {
+      display:inline;
+      margin-left: 0.5em;
     }
 
     &[open] summary {
