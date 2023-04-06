@@ -5,7 +5,4 @@
 <script defer src="{{ "katex/auto-render.min.js" | relURL }}" onload="renderMathInElement(document.body);"></script>
 {{- .Page.Scratch.Set "katex" true -}}
 {{- end -}}
-<nobr><span {{- with .Get "class" }} class="{{ . }}"{{ end }}>
-  {{ cond (in .Params "display") "\\[" "\\(" -}}
-  {{- trim .Inner "\n" -}}
-  {{- cond (in .Params "display") "\\]" "\\)" }}</span></nobr>
+<nobr><span {{- with .Get "class" }} class="{{ . }}"{{ end }}>{{ cond (in .Params "display") "\\[" "\\(" -}}{{- trim .Inner "\n" -}}{{- cond (in .Params "display") "\\]" "\\)" }}</span></nobr>
